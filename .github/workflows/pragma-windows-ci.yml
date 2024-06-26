@@ -34,6 +34,13 @@ jobs:
         Invoke-WebRequest -Uri "https://github.com/Silverlan/pragma/releases/download/nightly/pragma-win64.zip" -OutFile "pragma-win64.zip"
         Expand-Archive -Path "pragma-win64.zip" -DestinationPath "pragma"
 
+    - name: Run Test Scripts
+      shell: bash
+      run: |
+        cd "pragma"
+        ./pragma_server +"aaa"
+
+    #./pragma_server -cli -luaext -log 2 2 +map "test_physics" +"lua_exec tests/ci_runner_tests.lua"
     #- name: Run Test Scripts
     #  shell: pwsh
     #  run: |

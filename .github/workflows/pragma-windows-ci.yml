@@ -66,3 +66,6 @@ jobs:
       with:
         name: log_server
         path: "pragma/log_server.txt"
+
+    - uses: mxschmitt/action-tmate@v3.18
+      name: CI

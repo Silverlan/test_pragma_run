@@ -38,7 +38,7 @@ jobs:
       shell: bash
       run: |
         cd "pragma"
-        ./pragma_server +"AAA" +"map empty" +"lua_exec tests/ci_runner_tests.lua"
+        ./pragma_server +"AAA" +"map empty" +"BBB" +"lua_exec tests/ci_runner_tests.lua"
 
     #./pragma_server -cli -luaext -log 2 2 +map "test_physics" +"lua_exec tests/ci_runner_tests.lua"
     #- name: Run Test Scripts

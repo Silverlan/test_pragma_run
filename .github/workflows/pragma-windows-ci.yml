@@ -35,7 +35,7 @@ jobs:
         Expand-Archive -Path "pragma-win64.zip" -DestinationPath "pragma"
 
     - name: Run Test Scripts
-      shell: bash
+      shell: pwsh
       run: |
         Set-Location -Path "pragma"
         ./pragma_server -luaext -log 2 2 +map "test_physics" +"lua_exec tests/ci_runner_tests.lua"
